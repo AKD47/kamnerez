@@ -1,0 +1,49 @@
+.header{
+  &__navigation{
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - (220px + 23px + 220px + 36px + 32px + 27px));
+  }
+  &__menu{
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(center);
+    position: relative;
+    float: left;
+    width: 100%;
+    margin: 0;
+    margin-top: 36px;
+    padding: 0;
+    list-style: none;
+    li{
+      a{
+        display: block;
+        position: relative;
+        float: left;
+        //width: 100%;
+        margin: 0 20px;
+        //padding: 0 20px;
+        @include box-sizing(border-box);
+        color: #323232;
+        font-family: $PFBeauSansProReg;
+        font-size: 17px;
+        text-transform: uppercase;
+        &:hover{
+          color: #e23f5e;
+          &:after{
+            display: block;
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 2px;
+            left: 0;
+            bottom: -37px;
+            background-color: #e23f5e;
+          }
+        }
+      }
+    }
+  }
+}
