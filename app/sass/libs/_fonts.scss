@@ -1,6 +1,7 @@
 $PFBeauSansProReg: 'PFBeauSansPro Regular';
 $PFBeauSansProBook: 'PFBeauSansPro Book';
 $PFBeauSansProThin: 'PFBeauSansPro Thin';
+$PFDinTextCompProRegular: 'PFDinTextCompPro Regular';
 
 @font-face {
   font-family: 'PFBeauSansPro Regular';
@@ -27,5 +28,14 @@ $PFBeauSansProThin: 'PFBeauSansPro Thin';
   url('../fonts/PFBeauSansPro/PFBeauSansProThin.woff') format('woff'),
   url('../fonts/PFBeauSansPro/PFBeauSansProThin.ttf') format('truetype'),
   url('../fonts/PFBeauSansPro/PFBeauSansProThin.svg') format('svg');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'PFDinTextCompPro Regular';
+  src: url('../fonts/PFBeauSansPro/PFDinTextCompProRegular.eot') format('embedded-opentype'),
+  url('../fonts/PFBeauSansPro/PFDinTextCompProRegular.woff2') format('woff2'),
+  url('../fonts/PFBeauSansPro/PFDinTextCompProRegular.woff') format('woff'),
+  url('../fonts/PFBeauSansPro/PFDinTextCompProRegular.ttf') format('truetype'),
+  url('../fonts/PFBeauSansPro/PFDinTextCompProRegular.svg') format('svg');
   font-weight: normal;
 }
