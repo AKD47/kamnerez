@@ -1,0 +1,99 @@
+.feedback{
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  background-image: url('../img/content/fb-bg.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  &:before{
+    display: block;
+    position: absolute;
+    content: '';
+    size: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+  }
+  .title, .subtitle{
+    color: #ffffff;
+  }
+  &__form{
+    display: block;
+    position: relative;
+    float: left;
+    width: 630px;
+    margin-left: calc(50% - (630px/2));
+    margin-top: 58px;
+    &--box{
+      display: block;
+      position: relative;
+      float: left;
+      width: calc(50% - 19px);
+      margin-right: 15px;
+    }
+    &--field{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 60px;
+      padding: 0 26px;
+      @include box-sizing(border-box);
+      border-radius: 3px;
+      border: 1px solid #ffffff;
+      background-color: rgba(255,255,255,0.2);
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 31px;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+    }
+    &--msg{
+      display: block;
+      position: relative;
+      float: right;
+      width: calc(50% - 19px);
+      height: 151px;
+      margin-left: 15px;
+      padding: 22px 26px;
+      @include box-sizing(border-box);
+      border-radius: 3px;
+      border: 1px solid #ffffff;
+      background-color: rgba(255,255,255,0.2);
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 400;
+      resize: none;
+    }
+    &--submit{
+      display: block;
+      position: relative;
+      float: left;
+      width: 206px;
+      height: 56px;
+      margin-top: 41px;
+      margin-left: calc(50% - (206px/2));
+      margin-bottom: 74px;
+      border-radius: 27px;
+      border: 1px solid transparent;
+      background-color: #d71f42;
+      cursor: pointer;
+      color: #ffffff;
+      font-family: $PFDinTextCompProRegular;
+      font-size: 17px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      @include transition(0.4s);
+      &:hover{
+        border: 1px solid #fff;
+        background-color: transparent;
+        color: #d71f42;
+        @include transition(0.4s);
+      }
+    }
+  }
+}

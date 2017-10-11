@@ -1,46 +1,35 @@
-.adv{
+.for{
   display: block;
   position: relative;
   float: left;
   width: 100%;
-  background-color: #f7f7f7;
-  &:after{
-    display: block;
-    position: absolute;
-    content: '';
-    width: 80px;
-    height: 2px;
-    background-color: #ef4666;
-    left: calc(50% - (80px/2));
-    bottom: 0;
-  }
+  background-color: #ffffff;
   &__wrapper{
     @include display-flex(flex);
     @include flex-wrap(wrap);
     @include flex-direction(row);
     @include justify-content(space-around);
-    @include align-items(baseline);
     position: relative;
     float: left;
     width: 100%;
-    margin-top: 52px;
-    margin-bottom: 62px;
+    margin-top: 73px;
+    margin-bottom: 124px;
     &--element{
       @include display-flex(flex);
       @include flex-wrap(wrap);
       @include flex-direction(column);
-      @include justify-content(center);
-      align-items: center;
+      @include align-items(center);
       position: relative;
       float: left;
-      width: 30%;
+      width: 242px;
       .icon{
         display: block;
         position: relative;
         float: left;
-        width: 69px;
-        height: 69px;
-        margin-bottom: 37px;
+        width: 230px;
+        height: 230px;
+        margin-bottom: 57px;
+        border-radius: 50%;
         overflow: hidden;
         img{
           size: 100%;
@@ -51,7 +40,8 @@
         display: block;
         position: relative;
         float: left;
-        max-width: 208px;
+        width: 100%;
+        margin: 0;
         color: #4a4a4a;
         font-size: 19px;
         font-weight: 400;
