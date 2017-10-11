@@ -107,7 +107,7 @@ gulp.task('compress', ['clean'], function () {// Создаем таск compres
             suffix: ".min",// Добавляем суффикс .min
             extname: ".js"// Добавляем окончание .js
         }))
-        .pipe(uglify()) // Сжимаем JS файл
+        // .pipe(uglify()) // Сжимаем JS файл
         .pipe(plumber.stop())
         .pipe(gulp.dest('js'))// Выгружаем в папку js
         .pipe(browserSync.stream({}));
