@@ -41,10 +41,45 @@ $(document).ready(function () {
             infinite: true,
             speed: 500,
             fade: true,
-            arrows: true,
-            cssEase: 'linear'
+            arrows: false,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            cssEase: 'linear',
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        infinite: true,
+                        dots: false
+                    }
+                }
+            ]
         });  
     }    
+    /*close*/
+
+    /*catalog layots tabs*/
+    $('.clients__wrapper--box').each(function (i) {
+        if (i != 0) {
+            $(this).hide(0)
+        }
+    });
+    $(document).on('click', '.clients__tabs a', function (event) {
+        event.preventDefault();
+        var tabId = $(this).attr('href');
+        $('.clients__tabs a').removeClass('active');
+        $(this).addClass('active');
+        $('.clients__wrapper--box').hide(0);
+        $(tabId).fadeIn();
+    });
     /*close*/
     
 });
