@@ -4,6 +4,7 @@
   float: left;
   width: 100%;
   background-color: #f7f7f7;
+  border-bottom: 1px solid #e8e8e8;
   &__pages{
     @include display-flex(flex);
     @include flex-wrap(wrap);

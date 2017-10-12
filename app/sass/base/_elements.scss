@@ -76,3 +76,33 @@
     transform:         translateY(-10px)
   }
 }
+
+.preloader-wrap{
+  position: fixed;
+  opacity: 1;
+  z-index: 10200;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-color: #000;
+  .preloader{
+    margin: auto;
+    text-align: center;
+    .c-gif{
+      max-width: 100%;
+    }
+  }
+}
+
+.hidden-overflow{
+  overflow: hidden !important;
+}
+
+.hidden-before-preloader{
+  opacity: 0;
+}

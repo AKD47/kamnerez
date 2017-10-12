@@ -126,6 +126,28 @@ $(document).ready(function () {
         event.preventDefault();
         $('html, body').animate({scrollTop: 0},1000);
         return false;
-    })
+    });
     /*close*/
 });
+
+;(function($) {
+
+    var preloader = {
+        open: function () {
+            $('body').addClass('hidden-overflow');
+            $('.js-open').fadeIn('fast');
+        },
+        close: function () {           
+            $('body').removeClass('hidden-overflow');
+            $('.js-open').fadeOut('fast');
+        }
+    };
+
+    preloader.open();
+
+    $(window).on('load', function() {
+        setTimeout(function() {
+            preloader.close();
+        },400);
+    });
+})(jQuery);
