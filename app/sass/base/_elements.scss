@@ -23,3 +23,56 @@
   font-style:  italic;
   text-align: center;
 }
+.top{
+  display: block;
+  position: relative;
+  float: left;
+  width: 82px;
+  height: 82px;
+  border: 1px solid #e1e1e1;
+  background-color: #ffffff;
+  border-radius: 50%;
+  .icon{
+    display: block;
+    position: absolute;
+    top: 32px;
+    left: calc(50% - (28px/2));
+    width: 28px;
+    height: 14px;
+    background-image: url('../img/icons/go-top-icon.png');
+    background-repeat: no-repeat;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+}
+.top:hover{
+  box-shadow: 0px 0px 12px 0px #e23f5e;
+  .icon{
+    animation-name: bounce;
+    -moz-animation-name: bounce;
+  }
+}
+
+@keyframes bounce {
+  0%, 100%, 20%, 50%, 80% {
+    -webkit-transform: translateY(0);
+    -ms-transform:     translateY(0);
+    transform:         translateY(0)
+  }
+  40% {
+    -webkit-transform: translateY(-15px);
+    -ms-transform:     translateY(-15px);
+    transform:         translateY(-15px)
+  }
+  60% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform:     translateY(-10px);
+    transform:         translateY(-10px)
+  }
+}

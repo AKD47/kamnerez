@@ -1,8 +1,18 @@
+$PFBeauSansProSebold: 'PFBeauSansProSebold';
 $PFBeauSansProReg: 'PFBeauSansPro Regular';
 $PFBeauSansProBook: 'PFBeauSansPro Book';
 $PFBeauSansProThin: 'PFBeauSansPro Thin';
 $PFDinTextCompProRegular: 'PFDinTextCompPro Regular';
 
+@font-face {
+  font-family: 'PFBeauSansPro Sebold';
+  src: url('../fonts/PFBeauSansPro/PFBeauSansProSebold.eot') format('embedded-opentype'),
+  url('../fonts/PFBeauSansPro/PFBeauSansProSebold.woff2') format('woff2'),
+  url('../fonts/PFBeauSansPro/PFBeauSansProSebold.woff') format('woff'),
+  url('../fonts/PFBeauSansPro/PFBeauSansProSebold.ttf') format('truetype'),
+  url('../fonts/PFBeauSansPro/PFBeauSansProSebold.svg') format('svg');
+  font-weight: normal;
+}
 @font-face {
   font-family: 'PFBeauSansPro Regular';
   src: url('../fonts/PFBeauSansPro/PFBeauSansProReg.eot') format('embedded-opentype'),

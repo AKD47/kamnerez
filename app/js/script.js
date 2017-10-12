@@ -121,4 +121,11 @@ $(document).ready(function () {
     });
     /*close*/
 
+    /*go to top*/   
+    $('#go_top').click(function(event) {
+        event.preventDefault();
+        $('html, body').animate({scrollTop: 0},1000);
+        return false;
+    })
+    /*close*/
 });
