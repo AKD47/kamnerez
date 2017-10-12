@@ -39,7 +39,7 @@ gulp.task('css-libs', function () { // Создаем таск css-libs
     ]) // Берем источник
         .pipe(postcss(processors))// сжымаем
         .pipe(concat('libs.min.css'))// объеденяем в файл
-        .pipe(gulp.dest('css')) // Выгружаем результата в папку app/css
+        .pipe(gulp.dest('./puplic/css')) // Выгружаем результата в папку app/css
         .pipe(browserSync.stream({})); // Обновляем CSS на странице при изменении
 });
 
@@ -67,14 +67,14 @@ gulp.task('sass', function () { // Создаем таск Sass
         }))
         .pipe(sourcemaps.write('.', {sourceRoot: 'css-source'}))
         .pipe(plumber.stop())
-        .pipe(gulp.dest('css'))
+        .pipe(gulp.dest('./puplic/css'))
         .pipe(browserSync.stream({}));
 });
 
 gulp.task('browser-sync', function () { // Создаем таск browser-sync
     browserSync.init({ // Выполняем browserSync
         server: {
-            baseDir: "./layout"
+            baseDir: "./puplic"
         }
        /* ghostMode: {
             clicks: true,
@@ -96,7 +96,7 @@ gulp.task('vendor', ['clean'], function () {
         .pipe(rename({}))
         /*.pipe(uglify()) // Сжимаем JS файл*/
         .pipe(plumber.stop())
-        .pipe(gulp.dest('js'));// Выгружаем в папку js
+        .pipe(gulp.dest('./puplic/js'));// Выгружаем в папку js
 });
 
 gulp.task('compress', ['clean'], function () {// Создаем таск compress
@@ -109,26 +109,26 @@ gulp.task('compress', ['clean'], function () {// Создаем таск compres
         }))
         // .pipe(uglify()) // Сжимаем JS файл
         .pipe(plumber.stop())
-        .pipe(gulp.dest('js'))// Выгружаем в папку js
+        .pipe(gulp.dest('./puplic/js'))// Выгружаем в папку js
         .pipe(browserSync.stream({}));
 
 });
 
 gulp.task("clean", function (cb) {
-    rimraf('./js/script.min.js', cb);
+    rimraf('./puplic/js/script.min.js', cb);
 });
 
 gulp.task('extend-pages', function () {
     gulp.src('./app/html/pages/*.html')
         .pipe(extender({annotations: true, verbose: false})) // default options
-        .pipe(gulp.dest('./layout'))
+        .pipe(gulp.dest('./puplic'))
         .pipe(browserSync.stream({}));
 });
 
 gulp.task('extend-blocks', function () {
     gulp.src('./app/html/*.html')
         .pipe(extender({annotations: true, verbose: false})) // default options
-        .pipe(gulp.dest('./layout'))
+        .pipe(gulp.dest('./puplic'))
         .pipe(browserSync.stream({}));
 });
 
@@ -151,7 +151,7 @@ gulp.task('img', function () {
             }],
             use: [pngquant()]
         })))
-        .pipe(gulp.dest('img'))
+        .pipe(gulp.dest('./puplic/img'))
         .pipe(browserSync.reload({
             stream: true
         }));

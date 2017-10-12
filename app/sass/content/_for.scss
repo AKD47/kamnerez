@@ -14,6 +14,9 @@
     width: 100%;
     margin-top: 73px;
     margin-bottom: 124px;
+    @include breakpoint(max-width 660px){
+      margin-bottom: 30px;
+    }
     &--element{
       @include display-flex(flex);
       @include flex-wrap(wrap);
@@ -22,6 +25,9 @@
       position: relative;
       float: left;
       width: 242px;
+      @include breakpoint(max-width 660px){
+        margin-bottom: 30px;
+      }
       .icon{
         display: block;
         position: relative;
@@ -31,6 +37,9 @@
         margin-bottom: 57px;
         border-radius: 50%;
         overflow: hidden;
+        @include breakpoint(max-width 660px){
+          margin-bottom: 10px;
+        }
         img{
           size: 100%;
           object-fit: contain;

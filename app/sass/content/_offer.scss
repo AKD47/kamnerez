@@ -21,6 +21,9 @@
       height: 237px;
       overflow: hidden;
       cursor: pointer;
+      @include breakpoint(max-width 660px){
+        width: 100%;
+      }
       img{
         size: 100%;
         object-fit: cover;

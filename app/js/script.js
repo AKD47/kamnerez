@@ -34,6 +34,17 @@
 
 $(document).ready(function () {
 
+
+    /*mobile menu*/
+    $(document).on('click', '#mobile-menu', function (event) {
+        event.preventDefault();
+        var menu = $(this).next('.header__menu');
+        $(this).toggleClass('header__trigger--active');
+        menu.slideToggle('slow');
+        return false;
+    });    
+    /*close*/
+
     /*top-slider*/
     if($('#top-slider').length > 0){
         $('#top-slider').slick({

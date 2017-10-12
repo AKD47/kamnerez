@@ -14,6 +14,9 @@
     margin-top: 46px;
     margin-bottom: 19px;
     overflow: hidden;
+    @include breakpoint(max-width 660px){
+      margin-left: calc(50% - (220px/2));
+    }
     img {
       size: 100%;
       object-fit: contain;
@@ -30,6 +33,9 @@
     padding-left: 93px;
     @include box-sizing(border-box);
     list-style: none;
+    @include breakpoint(max-width 660px){
+      width:100%;
+    }
     li {
       position: relative;
       a {
@@ -58,6 +64,11 @@
     float: left;
     width: 25%;
     margin-top: 46px;
+    @include box-sizing(border-box);
+    @include breakpoint(max-width 660px){
+      width:100%;
+      padding-left: 50px;
+    }
     &--phone {
       display: block;
       position: relative;
@@ -68,10 +79,12 @@
       color: #fff;
       font-family: $PFBeauSansProBook;
       font-size: 18px;
+      @include breakpoint(max-width 660px){
+        width:100%;
+      }
       &:hover {
         color: #e23f5e;
       }
-
     }
     &--phone:first-of-type:before {
       display: block;
@@ -124,6 +137,10 @@
     @include box-sizing(border-box);
     color: #fff;
     font-size: 18px;
+    @include breakpoint(max-width 660px){
+      width:100%;
+      padding-left: 93px;
+    }
     &:before{
       display: block;
       position: absolute;
@@ -136,6 +153,9 @@
       background-repeat: no-repeat;
       -webkit-background-size: contain;
       background-size: contain;
+      @include breakpoint(max-width 660px){
+        left: 55px;
+      }
     }
   }
   &__art{
@@ -147,6 +167,7 @@
     padding-top: 39px;
     padding-bottom: 40px;
     border-top: 1px solid #424242;
+    @include box-sizing(border-box);
     p{
       position: relative;
       float: left;
