@@ -1,0 +1,30 @@
+.services{
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  background-color: #fff;
+  .top-content__wrapper--descr{
+    margin-top: 59px;
+    margin-bottom: 97px;
+  }
+  .works__wrapper{
+    @include justify-content(center);
+    &--element{
+      width: calc(25% - 28px);
+      height: 265px;
+      margin-left: 14px;
+      margin-right: 14px;
+      &:hover{
+        .works__wrapper--descr{
+          background-color: rgba(239,70,102,0.85);
+        }
+      }
+    }
+    &--descr{
+     opacity: 1;
+     background-color: rgba(0,0,0,0.7);
+      @include transition(0.4s);
+    }
+  }
+}
