@@ -15,6 +15,15 @@
       height: 265px;
       margin-left: 14px;
       margin-right: 14px;
+      @include breakpoint(max-width 1024px){
+        width: calc(33% - 14px);
+      }
+      @include breakpoint(max-width 768px){
+        width: calc(50% - 14px);
+      }
+      @include breakpoint(max-width 660px){
+        width: calc(100% - 14px);
+      }
       &:hover{
         .works__wrapper--descr{
           background-color: rgba(239,70,102,0.85);
@@ -25,6 +34,100 @@
      opacity: 1;
      background-color: rgba(0,0,0,0.7);
       @include transition(0.4s);
+    }
+  }
+  &__form{
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(space-around);
+    @include align-items(center);
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 153px;
+    border: 1px solid #494949;
+    border-style: dotted;
+    border-radius: 70px;
+    padding-top: 37px;
+    padding-bottom: 36px;
+    @include box-sizing(border-box);
+    @include breakpoint(max-width 660px){
+      @include flex-direction(column);
+    }
+    &--icon{
+      display: block;
+      position: relative;
+      float: left;
+      width: 47px;
+      height: 58px;
+      overflow: hidden;
+      @include breakpoint(max-width 660px){
+        margin-bottom: 15px;
+      }
+      img{
+        size: 100%;
+        object-fit: contain;
+      }
+    }
+    .subtitle{
+      width: auto;
+      color: #353535;
+      font-size: 18px;
+      font-weight: 400;
+      @include breakpoint(max-width 660px){
+        margin-bottom: 15px;
+      }
+    }
+    .icon{
+      display: block;
+      position: relative;
+      float: left;
+      width: 12px;
+      height: 23px;
+      overflow: hidden;
+      background-image: url('../img/icons/shevron-icon.png');
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain ;
+      animation-name: left;
+      -moz-animation-name: left;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      -webkit-animation-iteration-count: infinite;
+      @include breakpoint(max-width 660px){
+        display: none;
+      }
+    }
+    &--submit{
+      display: block;
+      position: relative;
+      float: left;
+      width: 206px;
+      height: 56px;
+      border-radius: 27px;
+      border: 1px solid transparent;
+      background-color: #d71f42;
+      cursor: pointer;
+      color: #fff;
+      font-family: $PFDinTextCompProRegular;
+      font-size: 17px;
+      line-height: 57px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      text-align: center;
+      @include transition(0.4s);
+      &:hover{
+        border: 1px solid #d71f42;
+        background-color: transparent;
+        color: #d71f42;
+        @include transition(0.4s);
+      }
     }
   }
 }
