@@ -76,6 +76,9 @@
             left: 0;
             bottom: -35px;
             background-color: #e23f5e;
+            @include breakpoint(max-width 992px){
+              display: none;
+            }
           }
         }
       }

@@ -21,12 +21,29 @@
       height: 237px;
       overflow: hidden;
       cursor: pointer;
+      @include transition(0.4s);
       @include breakpoint(max-width 660px){
         width: 100%;
       }
       img{
         size: 100%;
         object-fit: cover;
+      }
+      .works__wrapper--descr{
+        @include display-flex(flex);
+        @include flex-wrap(wrap);
+        @include flex-direction(row);
+        @include justify-content(center);
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background-color: #d71f42;
+        opacity: 0;
+        @include transition(0.4s);
+        z-index: 1;
       }
     }
     &--element:nth-of-type(odd):before{
@@ -59,6 +76,22 @@
         color: #2a2a2a;
       }
     }
+    &--element:hover{
+      .offer__wrapper--subtitle{
+        display: block;
+      }
+      .offer__wrapper--title{
+        color: #f7f7f7;
+        text-decoration: underline;
+      }
+      .offer__wrapper--more{
+        display: block;
+      }
+      .works__wrapper--descr{
+        opacity: 1;
+        @include transition(0.4s);
+      }
+    }
     &--title{
       display: block;
       position: absolute;
@@ -71,7 +104,52 @@
       bottom: 0;
       font-size: 24px;
       font-weight: 400;
-      z-index: 1;
+      z-index: 2;
+    }
+    &--subtitle{
+      display: none;
+      position: absolute;
+      top: 42px;
+      left: 0;
+      width: 100%;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 300;
+      font-style:  italic;
+      text-align: left;
+      padding: 0 49px;
+      @include box-sizing(border-box);
+      z-index: 2;
+    }
+    &--more{
+      display: none;
+      position: absolute;
+      width: 105px;
+      right: 0;
+      bottom: 0;
+      margin-bottom: 26px;
+      margin-right: 26px;
+      padding-left: 41px;
+      box-sizing: border-box;
+      color: #ffffff;
+      font-family: $PFDinTextCompProRegular;
+      font-size: 16px;
+      font-weight: 400;
+      text-transform: uppercase;
+      z-index: 2;
+      &:before{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 25px;
+        height: 16px;
+        left: 0;
+        top: 2px;
+        background-image: url('../img/icons/eye-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+      }
     }
   }
 }
