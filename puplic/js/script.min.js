@@ -1,35 +1,24 @@
-/*if ($('#map').length > 0) {
- /!*yandex map*!/
- var map = new Map();
- map.init({
- selector: '#map2',
- center: 'г. Донецк, ул. Артема 75',
- zoom: 12,
- placemarks: [
- {
- address: 'г. Донецк, ул. Артема 75',
- options: [
- {key: 'draggable', value: true}
- ],
- properties: [
- {key: 'hintContent', value: 'Тыц'},
- {key: 'balloonContentHeader', value: "Предприятия Донецка"},
- {key: 'balloonContentBody', value: "<h1>ArtCraft</h1>"}
- ]
- },
- {
- address: 'г. Донецк, ул. Артема 100',
- options: [
- {key: 'draggable', value: true}
- ],
- properties: [
- {key: 'hintContent', value: 'Пока'}
- ]
- }
- ]
- });
- /!*close yandex map*!/
- }*/
+if ($('#map').length > 0) {
+    var map = new Map();
+    map.init({
+        selector: '#map',
+        center: $('.concreate-adress').html(),
+        zoom: 13,
+        placemarks: [
+            {
+                address: $(".concreate-adress").html(),
+                options: [
+                    {key: 'draggable', value: false},
+                    {key: 'iconLayout', value: 'default#image'},
+                    {key: 'iconImageHref', value: '/img/icons/map-marker-icon.png'}
+                ],
+                properties: [
+                    {key: 'balloonContentHeader', value: $('.map-placemarks-title').html()}
+                ]
+            }
+        ]
+    });
+}
 
 
 $(document).ready(function () {
@@ -50,13 +39,13 @@ $(document).ready(function () {
         event.preventDefault();
         var form = $(this).next('.header__callback');
         console.log(form);
-        if($(this).hasClass('active')){
+        if ($(this).hasClass('active')) {
             $(this).removeClass('active');
             form.slideUp(400);
         } else {
             $(this).addClass('active');
             form.slideDown(400);
-        }       
+        }
         return false;
     });
     $(document).on('click', '.header__callback--close', function (event) {
@@ -68,7 +57,7 @@ $(document).ready(function () {
     $(document).on('click', function (e) {
         if ($(e.target).closest('.header__callback').length != 1) {
             $('.header__msg').removeClass('active');
-            $('.header__callback').slideUp(400);            
+            $('.header__callback').slideUp(400);
         }
     });
     /*close*/
@@ -121,23 +110,23 @@ $(document).ready(function () {
     });
     /*close*/
 
-    /*go to top*/   
-    $('#go_top').click(function(event) {
+    /*go to top*/
+    $('#go_top').click(function (event) {
         event.preventDefault();
-        $('html, body').animate({scrollTop: 0},1000);
+        $('html, body').animate({scrollTop: 0}, 1000);
         return false;
     });
     /*close*/
 });
 
-;(function($) {
+;(function ($) {
 
     var preloader = {
         open: function () {
             $('body').addClass('hidden-overflow');
             $('.js-open').fadeIn('fast');
         },
-        close: function () {           
+        close: function () {
             $('body').removeClass('hidden-overflow');
             $('.js-open').fadeOut('fast');
         }
@@ -145,9 +134,9 @@ $(document).ready(function () {
 
     preloader.open();
 
-    $(window).on('load', function() {
-        setTimeout(function() {
+    $(window).on('load', function () {
+        setTimeout(function () {
             preloader.close();
-        },400);
+        }, 400);
     });
 })(jQuery);

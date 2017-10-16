@@ -3,7 +3,7 @@
     display: block;
     position: relative;
     float: left;
-    width: calc(100% - (220px + 23px + 220px + 36px + 84px));
+    width: calc(100% - (220px + 220px + 40px + 84px));
     @include breakpoint(max-width 1224px){
       width: calc(100% - (220px + 23px));
     }
