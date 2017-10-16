@@ -58,7 +58,24 @@
     -moz-animation-name: bounce;
   }
 }
-
+.separator{
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 1px;
+  background-color: #e5e5e5;
+  &:after{
+    display: block;
+    position: absolute;
+    content: '';
+    width: 80px;
+    height: 2px;
+    bottom: -1px;
+    left: calc(50% - (80px/2));
+    background-color: #ef4666;
+  }
+}
 @keyframes bounce {
   0%, 100%, 20%, 50%, 80% {
     -webkit-transform: translateY(0);

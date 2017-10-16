@@ -4,7 +4,7 @@
   float: left;
   width: 100%;
   background-color: #fff;
-  border-bottom: 1px solid #e5e5e5;
+  /*border-bottom: 1px solid #e5e5e5;
   &:after{
     display: block;
     position: absolute;
@@ -14,7 +14,7 @@
     bottom: -1px;
     left: calc(50% - (80px/2));
     background-color: #ef4666;
-  }
+  }*/
   &__wrapper{
     @include display-flex(flex);
     @include flex-wrap(wrap);

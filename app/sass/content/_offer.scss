@@ -152,4 +152,18 @@
       }
     }
   }
+  &__descr{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 68px;
+    .title{
+      margin-bottom: 0;
+    }
+    .top-content__wrapper--descr{
+      margin-top: 62px;
+      margin-bottom: 96px;
+    }
+  }
 }

@@ -16,6 +16,11 @@
     padding-top: 88px;
     padding-bottom: 84px;
     @include box-sizing(border-box);
+    @include breakpoint(max-width 900px){
+      @include flex-direction(column);
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
     &--element{
       @include display-flex(flex);
       @include flex-wrap(wrap);
@@ -26,6 +31,10 @@
       width: calc(33% - (34px*2));
       margin-left: 34px;
       margin-right: 34px;
+      @include breakpoint(max-width 900px){
+        width: calc(100% - (34px*2));
+        margin-bottom: 15px;
+      }
     }
     &--icon{
       display: block;
@@ -118,6 +127,10 @@
     width: 630px;
     margin-top: 43px;
     margin-left: calc(50% - (630px/2));
+    @include breakpoint(max-width 660px){
+      width: 100%;
+      margin-left: 0;
+    }
     &--box{
       display: block;
       position: relative;
