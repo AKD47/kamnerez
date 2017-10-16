@@ -45,15 +45,17 @@
     position: relative;
     float: left;
     width: 100%;
+    height: 131px;
     margin-bottom: 153px;
     border: 1px solid #494949;
     border-style: dotted;
     border-radius: 70px;
-    padding-top: 37px;
-    padding-bottom: 36px;
+    padding-top: 0;
+    padding-bottom: 0;
     @include box-sizing(border-box);
     @include breakpoint(max-width 660px){
       @include flex-direction(column);
+      height: auto;
     }
     &--icon{
       display: block;
@@ -64,6 +66,7 @@
       overflow: hidden;
       @include breakpoint(max-width 660px){
         margin-bottom: 15px;
+        margin-top: 15px;
       }
       img{
         size: 100%;
@@ -75,6 +78,7 @@
       color: #353535;
       font-size: 18px;
       font-weight: 400;
+      margin: 0;
       @include breakpoint(max-width 660px){
         margin-bottom: 15px;
       }
@@ -122,6 +126,9 @@
       letter-spacing: 4px;
       text-align: center;
       @include transition(0.4s);
+      @include breakpoint(max-width 660px){
+        margin-bottom: 15px;
+      }
       &:hover{
         border: 1px solid #d71f42;
         background-color: transparent;

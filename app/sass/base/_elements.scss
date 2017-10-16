@@ -76,6 +76,18 @@
     background-color: #ef4666;
   }
 }
+.from-top{
+  margin-top: 94px;
+  @include breakpoint(max-width 660px){
+    margin-top: 20px;
+  }
+}
+.from-bottom{
+  margin-bottom: 94px;
+  @include breakpoint(max-width 660px){
+    margin-bottom: 20px;
+  }
+}
 @keyframes bounce {
   0%, 100%, 20%, 50%, 80% {
     -webkit-transform: translateY(0);
