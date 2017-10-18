@@ -33,10 +33,12 @@
         @include align-items(center);
         position: relative;
         float: left;
-        width: 205px;
-        height: 56px;
+        //width: 205px;
+        //height: 56px;
         margin: 0 10px;
-        border-radius: 27px;
+        padding: 19px 26px;
+        @include box-sizing(border-box);
+        border-radius: 30px;
         border: 1px solid #d5d5d5;
         color: #abaaaa;
         font-family: $PFDinTextCompProRegular;
@@ -108,5 +110,4 @@
       }
     }
   }
-
 }

@@ -76,6 +76,11 @@
     background-color: #ef4666;
   }
 }
+.counter{
+  color: #c8c8c8;
+  font-weight: 300;
+  font-size: 30px;
+}
 .from-top{
   margin-top: 94px;
   @include breakpoint(max-width 660px){
