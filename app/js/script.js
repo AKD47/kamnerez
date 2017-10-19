@@ -23,7 +23,6 @@ if ($('#map').length > 0) {
 
 $(document).ready(function () {
 
-
     /*mobile menu*/
     $(document).on('click', '#mobile-menu', function (event) {
         event.preventDefault();
@@ -106,6 +105,22 @@ $(document).ready(function () {
         $('.clients__tabs a').removeClass('active');
         $(this).addClass('active');
         $('.clients__wrapper--box').hide(0);
+        $(tabId).fadeIn();
+    });
+    /*close*/
+
+    /*catalog stones tabs*/
+    $('.catalog__wrapper--box').each(function (i) {
+        if (i != 0) {
+            $(this).hide(0)
+        }
+    });
+    $(document).on('click', '.catalog__tabs a', function (event) {
+        event.preventDefault();
+        var tabId = $(this).attr('href');
+        $('.catalog__tabs a').removeClass('active');
+        $(this).addClass('active');
+        $('.catalog__wrapper--box').hide(0);
         $(tabId).fadeIn();
     });
     /*close*/

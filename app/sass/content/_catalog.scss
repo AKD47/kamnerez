@@ -12,14 +12,14 @@
     position: relative;
     float: left;
     width: 100%;
-    margin-top: 78px;
-    margin-bottom: 75px;
+    margin-top: 10px;
+    margin-bottom: 38px;
     padding: 0;
     list-style: none;
     @include breakpoint(max-width 660px){
       margin-top: 30px;
       margin-bottom: 30px;
-      @include flex-direction(column);
+      @include flex-direction(row);
       align-items: center;
     }
     li{
@@ -60,6 +60,72 @@
         padding: 15px 20px;
         @include box-sizing(border-box);
       }
+    }
+  }
+  &__wrapper{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 394px;
+    margin-bottom: 99px;
+    &--box{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+    }
+  }
+  &__items{
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    position: relative;
+    float: left;
+    width: 100%;
+    &--element{
+      display: block;
+      position: relative;
+      float: left;
+      width: calc(16.66% - 15px);
+      height: 170px;
+      margin-bottom: 27px;
+      overflow: hidden;
+      @include transition(0.4s);
+      @include breakpoint(max-width 1024px){
+        width: calc(33% - 15px);
+      }
+      @include breakpoint(max-width 660px){
+        width: 100%;
+      }
+      img{
+        size: 100%;
+        object-fit: cover;
+      }
+    }
+    &--element:hover{
+      @include transition(0.4s);
+      box-shadow: 0 32px 62px rgba(53, 53, 53, 0.77);
+      .catalog__items--show{
+        opacity: 1;
+        @include transition(0.4s);
+      }
+    }
+    &--show{
+      display: block;
+      position: absolute;
+      content: '';
+      width: 68px;
+      height: 68px;
+      top: calc(50% - (68px/2));
+      left: calc(50% - (68px/2));
+      background-image: url('../img/icons/show-template-icon.png');
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+      opacity: 0;
+      @include transition(0.4s);
     }
   }
 }
