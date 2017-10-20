@@ -82,15 +82,15 @@
   font-size: 30px;
 }
 .from-top{
-  margin-top: 94px;
+  margin-top: 94px!important;
   @include breakpoint(max-width 660px){
-    margin-top: 20px;
+    margin-top: 20px!important;
   }
 }
 .from-bottom{
-  margin-bottom: 94px;
+  margin-bottom: 94px!important;
   @include breakpoint(max-width 660px){
-    margin-bottom: 20px;
+    margin-bottom: 20px!important;
   }
 }
 @keyframes bounce {
