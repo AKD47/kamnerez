@@ -37,7 +37,7 @@
       margin-bottom: 24px;
       background: rgba(0, 0, 0, .9);
     }
-    li{
+    > li{
       @include breakpoint(max-width 992px){
         position: relative;
         float: left;
@@ -45,7 +45,7 @@
         text-align: center;
         margin: 15px 0;
       }
-      a{
+      > a{
         display: block;
         position: relative;
         float: left;
@@ -79,6 +79,62 @@
             @include breakpoint(max-width 992px){
               display: none;
             }
+          }
+        }
+      }
+    }
+  }
+  &__submenu{
+    display: block;
+    position: absolute;
+    width: calc(100% + 564px);
+    left: -220px;
+    top: 55px;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    padding-left: 25px;
+    padding-right: 25px;
+    @include box-sizing(border-box);
+    background-color: #363636;
+    &--close{
+      display: block;
+      position: absolute;
+      content: '';
+      top: 30px;
+      right: 33px;
+      width: 18px;
+      height: 17px;
+      cursor: pointer;
+      background-image: url('../img/icons/close-icon.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: 1;
+    }
+    &--elements{
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(column);
+      @include justify-content(flex-start);
+      position: relative;
+      float: left;
+      width: calc(25% - 16px);
+      margin-top: 0;
+      margin-left: 15px;
+      padding: 0;
+      list-style: none;
+      li{
+        width: 100%;
+        a{
+          position: relative;
+          float: left;
+          //width: 100%;
+          font-family: $PFBeauSansProReg;
+          font-size: 18px;
+          color: #ffffff;
+          line-height: 40px;
+          &:hover{
+            color: #e23f5e;
+            text-decoration: underline;
           }
         }
       }
