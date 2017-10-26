@@ -96,6 +96,15 @@
     padding-right: 25px;
     @include box-sizing(border-box);
     background-color: #363636;
+    @include breakpoint(max-width 992px){
+      position: relative;
+      float: left;
+      width: 100%;
+      left: 0;
+      top: 0;
+      margin-top: 10px;
+      padding: 10px;
+    }
     &--close{
       display: block;
       position: absolute;
@@ -122,6 +131,10 @@
       margin-left: 15px;
       padding: 0;
       list-style: none;
+      @include breakpoint(max-width 992px){
+        width: 100%;
+        margin: 0;
+      }
       li{
         width: 100%;
         a{

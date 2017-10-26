@@ -84,11 +84,19 @@
     position: relative;
     float: left;
     width: 100%;
+    min-height: 400px;
+    &--elements{
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+    }
     &--element{
       display: block;
       position: relative;
       float: left;
-      width: calc(16.66% - 15px);
+      //width: calc(16.66% - 15px);
+      width: calc(100% - 30px);
       height: 170px;
       margin-bottom: 27px;
       overflow: hidden;

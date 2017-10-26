@@ -63,10 +63,10 @@ $(document).ready(function () {
 
     /*header submenu*/
     $(document).on('click', '.header__menu a', function (event) {
-        if($(this).next('.header__submenu').length > 0){           
+        if ($(this).next('.header__submenu').length > 0) {
             event.preventDefault();
             var submenu = $(this).next('.header__submenu');
-            if($(this).hasClass('show-submenu')){
+            if ($(this).hasClass('show-submenu')) {
                 $(this).removeClass('show-submenu');
                 submenu.slideUp(400);
             } else {
@@ -76,8 +76,8 @@ $(document).ready(function () {
                 submenu.slideDown(400);
             }
         } else {
-            
-        }        
+
+        }
     });
     $(document).on('click', '.header__submenu--close', function (event) {
         event.preventDefault();
@@ -85,12 +85,12 @@ $(document).ready(function () {
         $(this).closest('.header__submenu').slideUp(400);
         return false;
     });
-    // $(document).on('click', function (e) {
-    //     if ($(e.target).closest('.header__submenu').length != 1) {
-    //         $('.header__menu a').removeClass('show-submenu');
-    //         $('.header__submenu').slideUp(400);
-    //     }
-    // });
+    $(document).on('click', function (e) {
+        if ($(e.target).closest('.header__navigation').length != 1) {
+            $('.header__menu a').removeClass('show-submenu');
+            $('.header__submenu').slideUp(400);
+        }
+    });
     /*close*/
 
     /*top-slider*/
@@ -141,6 +141,28 @@ $(document).ready(function () {
     });
     /*close*/
 
+    $('.catalog__items').slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                  
+                }
+            }
+        ]
+    });
+
     /*catalog stones tabs*/
     $('.catalog__wrapper--box').each(function (i) {
         if (i != 0) {
@@ -153,10 +175,12 @@ $(document).ready(function () {
         $('.catalog__tabs a').removeClass('active');
         $(this).addClass('active');
         $('.catalog__wrapper--box').hide(0);
-        $(tabId).fadeIn();
+        $(tabId).fadeIn(function () {
+            $('.catalog__items').slick('refresh');
+        });
     });
-    /*close*/
-
+    /*close*/   
+  
     /*go to top*/
     $('#go_top').click(function (event) {
         event.preventDefault();
