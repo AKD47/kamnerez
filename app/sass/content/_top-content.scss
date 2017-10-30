@@ -27,7 +27,7 @@
       @include flex-direction(column);
     }
     &--links{
-      flex: 0 0 130px;
+      flex: 0 0 220px;
       position: relative;
       float: left;
       margin-top: 60px;
@@ -51,7 +51,8 @@
           font-family: $PFBeauSansProReg;
           font-size: 16px;
           font-weight: 400;
-          line-height: 37px;
+          margin-bottom: 20px;
+          line-height: 18px;
           &:hover{
             color: #e23f5e;
           }
