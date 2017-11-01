@@ -7,6 +7,17 @@
   padding-top: 74px;
   padding-bottom: 104px;
   @include box-sizing(border-box);
+  &__inner{
+    display: block;
+    position: relative;
+    float: left;
+    width: 744px;
+    margin-left: calc(50% - (744px/2));
+    @include breakpoint(max-width 743px){
+      width: 100%;
+      margin-left: 0;
+    }
+  }
   &__descr{
     display: block;
     position: relative;
