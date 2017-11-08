@@ -85,8 +85,54 @@
     float: left;
     width: 100%;
     min-height: 400px;
+    .slick-arrow{
+      width: 82px;
+      height: 82px;
+      border: 1px solid #e1e1e1;
+      background-color: #fff;
+      border-radius: 50%;
+      z-index: 2;
+      &:hover{
+        box-shadow: 0 0 12px 0 #e23f5e;
+      }
+    }
+    .slick-prev{
+      left: -90px;
+      &:before{
+        position: absolute;
+        width: 28px;
+        height: 14px;
+        top: 32px;
+        left: 23px;
+        background-image: url('../img/icons/go-top-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+        opacity: 1;
+        transform: rotate(-90deg);
+      }
+    }
+    .slick-next{
+      right: -90px;
+      &:before{
+        position: absolute;
+        width: 28px;
+        height: 14px;
+        top: 32px;
+        left: 29px;
+        background-image: url('../img/icons/go-top-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+        opacity: 1;
+        transform: rotate(90deg);
+      }
+    }
     &--elements{
-      display: block;
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(column);
+      @include justify-content(center);
       position: relative;
       float: left;
       width: 100%;
@@ -95,17 +141,19 @@
       display: block;
       position: relative;
       float: left;
-      //width: calc(16.66% - 15px);
       width: calc(100% - 30px);
       height: 170px;
+      margin-left: 12px;
       margin-bottom: 27px;
       overflow: hidden;
       @include transition(0.4s);
       @include breakpoint(max-width 1024px){
-        width: calc(33% - 15px);
+        //width: calc(33% - 15px);
+        margin-left: 0;
       }
       @include breakpoint(max-width 660px){
         width: 100%;
+        margin-left: 0;
       }
       img{
         size: 100%;

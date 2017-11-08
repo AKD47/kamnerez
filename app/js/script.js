@@ -66,7 +66,6 @@ $(document).ready(function () {
 
     $('.header__menu a').mouseover(function () {
        if($(this).next('.header__submenu').length > 0) {
-          
            var submenu = $(this).next('.header__submenu');
            if ($(this).hasClass('show-submenu')) {
                $(this).removeClass('show-submenu');
@@ -164,21 +163,23 @@ $(document).ready(function () {
     $('.catalog__items').slick({
         dots: false,
         infinite: false,
+        arrows: true,
         speed: 300,
         slidesToShow: 6,
         slidesToScroll: 1,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1030,
                 settings: {
-
+                    arrows: false
                 }
             },
             {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    arrows: false
                 }
             }
         ]
