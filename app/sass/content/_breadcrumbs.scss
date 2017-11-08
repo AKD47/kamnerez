@@ -48,6 +48,14 @@
         }
       }
     }
+    li:last-of-type{
+      a{
+        color: #e23f5e;
+        &:after{
+          display: none;
+        }
+      }
+    }
   }
   .title{
     color: #0e0f0d;
