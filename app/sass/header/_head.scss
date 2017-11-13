@@ -35,7 +35,9 @@
       margin-left: 36px;
     }
     @include breakpoint(max-width 660px){
-      width: calc(100% - (36px + 36px + 84px));
+      width: calc(100% - (36px + 84px));
+      margin-left: 0;
+      margin-top: 27px;
     }
     a {
       display: block;
@@ -62,6 +64,9 @@
       background-image: url('../img/icons/call-icon.png');
       background-repeat: no-repeat;
       background-size: contain;
+      @include breakpoint(max-width 660px){
+        top: 2px;
+      }
     }
   }
   &__msg {
