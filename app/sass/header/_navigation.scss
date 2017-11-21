@@ -17,10 +17,13 @@
     float: left;
     width: 100%;
     margin: 0;
-    margin-top: 31px;
+    margin-top: 32px;
     padding: 0;
     list-style: none;
-    @include breakpoint(max-width 992px) {
+    @include breakpoint(max-width 1300px){
+      margin-top: 36px;
+    }
+    @include breakpoint(max-width 1024px) {
       display: none;
       position: fixed;
       width: 100%;
@@ -38,7 +41,7 @@
       background: rgba(0, 0, 0, .9);
     }
     > li{
-      @include breakpoint(max-width 992px){
+      @include breakpoint(max-width 1024px){
         position: relative;
         float: left;
         width: 100%;
@@ -57,10 +60,13 @@
         font-family: $PFBeauSansProReg;
         font-size: 17px;
         text-transform: uppercase;
-        @include breakpoint(max-width 1340px){
+        @include breakpoint(max-width 1400px){
           font-size: 14px;
         }
-        @include breakpoint(max-width 992px){
+        @include breakpoint(max-width 1400px){
+          font-size: 12px;
+        }
+        @include breakpoint(max-width 1024px){
           width: 100%;
           text-align: center;
           color: #fff;
@@ -77,11 +83,28 @@
             left: 0;
             bottom: -35px;
             background-color: #e23f5e;
-            @include breakpoint(max-width 992px){
+            @include breakpoint(max-width 1024px){
               display: none;
             }
           }
         }
+      }
+    }
+    .mobile-submenu{
+      display: none;
+      position: absolute;
+      width: 24px;
+      height: 17px;
+      top: -2px;
+      right: 0;
+      padding: 0 30px;
+      cursor: pointer;
+      .fa-chevron-down{
+        font-size: 15px;
+        color: #fff;
+      }
+      @include breakpoint(max-width 1024px){
+        display: block;
       }
     }
   }
@@ -97,7 +120,10 @@
     padding-right: 25px;
     @include box-sizing(border-box);
     background-color: #363636;
-    @include breakpoint(max-width 992px){
+    @include breakpoint(max-width 1280px){
+      top: 50px;
+    }
+    @include breakpoint(max-width 1024px){
       position: relative;
       float: left;
       width: 100%;
@@ -119,6 +145,9 @@
       background-repeat: no-repeat;
       background-size: contain;
       z-index: 1;
+      @include breakpoint(max-width 1024px){
+        display: none;
+      }
     }
     &--elements{
       @include display-flex(flex);
@@ -132,7 +161,7 @@
       margin-left: 15px;
       padding: 0;
       list-style: none;
-      @include breakpoint(max-width 992px){
+      @include breakpoint(max-width 1024px){
         width: 100%;
         margin: 0;
       }
@@ -146,6 +175,12 @@
           font-size: 18px;
           color: #ffffff;
           line-height: 40px;
+          @include breakpoint(max-width 1280px){
+            font-size: 12px;
+          }
+          @include breakpoint(max-width 1024px){
+            width: 100%;
+          }
           &:hover{
             color: #e23f5e;
             text-decoration: underline;
@@ -165,7 +200,7 @@
     border-radius: 50%;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
     z-index: 15;
-    @include breakpoint(max-width 992px) {
+    @include breakpoint(max-width 1024px) {
       display: block;
     }
     span, span:before, span:after {

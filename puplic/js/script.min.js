@@ -64,40 +64,26 @@ $(document).ready(function () {
     /*header submenu*/
 
    
-
-    $('.header__menu > li > a').mouseover(function () {
-        // if ($(this).next('.header__submenu').length > 0) {
+    if(window.innerWidth > 1024){
+        $('.header__menu > li > a').mouseover(function () {
             var submenu = $(this).next('.header__submenu');
-           /* if ($(this).hasClass('show-submenu')) {
-                $(this).removeClass('show-submenu');
-                submenu.slideUp(400);
-            } else {*/
-                $('.header__menu > li > a').removeClass('show-submenu');
-                $('.header__submenu').slideUp(400);
-                $(this).addClass('show-submenu');
-                submenu.slideDown(400);
-            /*}*/
-        // }
+            $('.header__menu > li > a').removeClass('show-submenu');
+            $('.header__submenu').slideUp(400);
+            $(this).addClass('show-submenu');
+            submenu.slideDown(400);
+        });
+    }
+    $(document).on('click', '.mobile-submenu', function (event) {
+        event.preventDefault();
+        var submenu = $(this).closest('a').next('.header__submenu');
+        if($(this).hasClass('show-mobile-submenu')){
+            $(this).removeClass('show-mobile-submenu');
+            submenu.slideUp(400);
+        } else {
+            $(this).addClass('show-mobile-submenu');
+            submenu.slideDown(400);
+        }
     });
-    
-
-    /*$(document).on('click', '.header__menu a', function (event) {
-     if ($(this).next('.header__submenu').length > 0) {
-     event.preventDefault();
-     var submenu = $(this).next('.header__submenu');
-     if ($(this).hasClass('show-submenu')) {
-     $(this).removeClass('show-submenu');
-     submenu.slideUp(400);
-     } else {
-     $('.header__menu a').removeClass('show-submenu');
-     $('.header__submenu').slideUp(400);
-     $(this).addClass('show-submenu');
-     submenu.slideDown(400);
-     }
-     } else {
-
-     }
-     });*/
 
     $(document).on('click', '.header__submenu--close', function (event) {
         event.preventDefault();
