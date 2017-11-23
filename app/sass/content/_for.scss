@@ -5,10 +5,10 @@
   width: 100%;
   background-color: #ffffff;
   &__wrapper{
-    @include display-flex(flex);
-    @include flex-wrap(wrap);
-    @include flex-direction(row);
-    @include justify-content(space-around);
+    //@include display-flex(flex);
+    //@include flex-wrap(wrap);
+    //@include flex-direction(row);
+    //@include justify-content(space-around);
     position: relative;
     float: left;
     width: 100%;
@@ -18,13 +18,13 @@
       margin-bottom: 30px;
     }
     &--element{
-      @include display-flex(flex);
-      @include flex-wrap(wrap);
-      @include flex-direction(column);
-      @include align-items(center);
+      //@include display-flex(flex);
+      //@include flex-wrap(wrap);
+      //@include flex-direction(column);
+      //@include align-items(center);
       position: relative;
       float: left;
-      width: 242px;
+      width: 33%;
       @include breakpoint(max-width 660px){
         margin-bottom: 30px;
       }
@@ -34,6 +34,7 @@
         float: left;
         width: 230px;
         height: 230px;
+        margin-left: calc(50% - (230px/2));
         margin-bottom: 57px;
         border-radius: 50%;
         overflow: hidden;

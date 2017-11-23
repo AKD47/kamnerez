@@ -15,29 +15,29 @@
     bottom: 0;
   }
   &__wrapper{
-    @include display-flex(flex);
-    @include flex-wrap(wrap);
-    @include flex-direction(row);
-    @include justify-content(space-around);
-    @include align-items(baseline);
+    //@include display-flex(flex);
+    //@include flex-wrap(wrap);
+    //@include flex-direction(row);
+    //@include justify-content(space-around);
+    //@include align-items(baseline);
     position: relative;
     float: left;
     width: 100%;
     margin-top: 52px;
     margin-bottom: 62px;
     @include breakpoint(max-width 660px){
-      @include flex-direction(column);
-      @include align-items(center);
+      //@include flex-direction(column);
+      //@include align-items(center);
     }
     &--element{
-      @include display-flex(flex);
-      @include flex-wrap(wrap);
-      @include flex-direction(column);
-      @include justify-content(center);
-      align-items: center;
+      //@include display-flex(flex);
+      //@include flex-wrap(wrap);
+      //@include flex-direction(column);
+      //@include justify-content(center);
+      //align-items: center;
       position: relative;
       float: left;
-      width: 30%;
+      width: 33%;
       @include breakpoint(max-width 660px){
         margin-bottom: 10px;
       }
@@ -45,8 +45,9 @@
         display: block;
         position: relative;
         float: left;
-        width: 69px;
+        width: 68px;
         height: 69px;
+        margin-left: calc(50% - (68px/2));
         margin-bottom: 37px;
         overflow: hidden;
         @include breakpoint(max-width 660px){
@@ -61,7 +62,10 @@
         display: block;
         position: relative;
         float: left;
-        max-width: 208px;
+        width: 100%;
+        text-align: center;
+        //max-width: 208px;
+        //margin-left: calc(50% - (208px/2));
         color: #4a4a4a;
         font-size: 19px;
         font-weight: 400;
