@@ -131,6 +131,12 @@ $(document).ready(function () {
     }
     /*close*/
 
+    /*offer mobile slider*/
+    $(window).on('load resize',function(){
+        offerSlider();
+    });
+    /*close*/
+
     /*clients slider*/
     $('.clients__items').slick({
         dots: false,
@@ -249,3 +255,16 @@ $(document).ready(function () {
         }, 400);
     });
 })(jQuery);
+
+function offerSlider() {
+    if($(document).width() < 679){
+        $('#offer-mobile-slider').slick({
+            dots: true,
+            infinite: true,
+            arrows: true,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+    }
+};

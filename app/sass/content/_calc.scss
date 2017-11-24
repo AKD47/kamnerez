@@ -1,0 +1,17 @@
+.calc{
+  position: relative;
+  float: left;
+  width: 100%;
+  background-color: #f7f7f7;
+  &__title{
+    position: relative;
+    float: left;
+    width: 100%;
+    color: #494949;
+    font-size: 24px;
+    font-family: $PFBeauSansProReg;
+    text-align: center;
+    margin-top: 82px;
+    margin-bottom: 43px;
+  }
+}

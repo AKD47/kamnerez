@@ -13,6 +13,9 @@
     float: left;
     width: 100%;
     margin-top: 61px;
+    @include breakpoint(max-width 660px){
+      margin-bottom: 30px;
+    }
     &--element{
       display: block;
       position: relative;
@@ -149,6 +152,72 @@
         background-repeat: no-repeat;
         -webkit-background-size: contain;
         background-size: contain;
+      }
+    }
+    .slick-arrow{
+      width: 82px;
+      height: 82px;
+      border: 1px solid #e1e1e1;
+      background-color: #fff;
+      border-radius: 50%;
+      z-index: 2;
+      &:hover{
+        box-shadow: 0 0 12px 0 #e23f5e;
+      }
+    }
+    .slick-prev{
+      left: 0;
+      top: 43px;
+      &:before{
+        position: absolute;
+        width: 28px;
+        height: 14px;
+        top: 32px;
+        left: 23px;
+        background-image: url('../img/icons/go-top-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+        opacity: 1;
+        transform: rotate(-90deg);
+      }
+    }
+    .slick-next{
+      right: 0;
+      top: 43px;
+      &:before{
+        position: absolute;
+        width: 28px;
+        height: 14px;
+        top: 32px;
+        left: 29px;
+        background-image: url('../img/icons/go-top-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+        opacity: 1;
+        transform: rotate(90deg);
+      }
+    }
+    .slick-dots{
+      width: 100%;
+      left: 0;
+      li{
+        width: 15px;
+        height: 15px;
+        button{
+          color: transparent;
+          size: 100%;
+          border-radius: 50%;
+          border: none;
+          padding: 0;
+          background-color: #000;
+        }
+      }
+      li.slick-active{
+        button{
+          background-color: #ef4666;
+        }
       }
     }
   }
