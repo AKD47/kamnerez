@@ -10,7 +10,7 @@ if ($('#map').length > 0) {
                 options: [
                     {key: 'draggable', value: false},
                     {key: 'iconLayout', value: 'default#image'},
-                    {key: 'iconImageHref', value: '/img/icons/map-marker-icon.png'}
+                    {key: 'iconImageHref', value: 'img/icons/map-marker-icon.png'}
                 ],
                 properties: [
                     {key: 'balloonContentHeader', value: $('.map-placemarks-title').html()}
