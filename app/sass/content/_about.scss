@@ -17,6 +17,7 @@
     float: left;
     width: 744px;
     margin-left: calc(50% - (744px/2));
+    margin-left: -moz-calc(50% - (744px/2));
     @include box-sizing(border-box);
     @include breakpoint(max-width 743px){
       width: 100%;
@@ -98,5 +99,6 @@
     margin-top: 98px;
     margin-bottom: 0;
     margin-left: calc(50% - (82px/2));
+    margin-left: -moz-calc(50% - (82px/2));
   }
 }

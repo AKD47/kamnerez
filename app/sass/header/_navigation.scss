@@ -4,10 +4,12 @@
     position: relative;
     float: left;
     width: calc(100% - (220px + 220px + 40px + 84px));
+    width: -moz-calc(100% - (220px + 220px + 40px + 84px));
     padding-left: 22px;
     @include box-sizing(border-box);
     @include breakpoint(max-width 1224px){
       width: calc(100% - (220px + 23px));
+      width: -moz-calc(100% - (220px + 23px));
     }
   }
   &__menu{
@@ -116,6 +118,7 @@
     display: none;
     position: absolute;
     width: calc(100% + 564px);
+    width: -moz-calc(100% + 564px);
     left: -220px;
     top: 55px;
     padding-top: 50px;
@@ -161,6 +164,7 @@
       position: relative;
       float: left;
       width: calc(25% - (15px*2));
+      width: -moz-calc(25% - (15px*2));
       margin-top: 0;
       margin-left: 15px;
       margin-right: 15px;
@@ -175,7 +179,7 @@
         a{
           position: relative;
           float: left;
-          //width: 100%;
+          width: 100%;
           font-family: $PFBeauSansProReg;
           font-size: 18px;
           color: #ffffff;

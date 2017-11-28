@@ -25,6 +25,7 @@
     float: left;
     width: 630px;
     margin-left: calc(50% - (630px/2));
+    margin-left: -moz-calc(50% - (630px/2));
     margin-top: 58px;
     @include breakpoint(max-width 660px){
       width: 100%;
@@ -35,6 +36,7 @@
       position: relative;
       float: left;
       width: calc(50% - 19px);
+      width: -moz-calc(50% - 19px);
       margin-right: 15px;
       @include breakpoint(max-width 660px){
         width: 100%;
@@ -66,6 +68,7 @@
       position: relative;
       float: right;
       width: calc(50% - 19px);
+      width: -moz-calc(50% - 19px);
       height: 151px;
       margin-left: 15px;
       padding: 22px 26px;
@@ -91,6 +94,7 @@
       height: 56px;
       margin-top: 41px;
       margin-left: calc(50% - (206px/2));
+      margin-left: -moz-calc(50% - (206px/2));
       margin-bottom: 74px;
       border-radius: 27px;
       border: 1px solid transparent;

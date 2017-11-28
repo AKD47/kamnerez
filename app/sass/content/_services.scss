@@ -12,17 +12,21 @@
     @include justify-content(center);
     &--element{
       width: calc(25% - 28px);
+      width: -moz-calc(25% - 28px);
       height: 265px;
       margin-left: 14px;
       margin-right: 14px;
       @include breakpoint(max-width 1024px){
         width: calc(33% - 14px);
+        width: -moz-calc(33% - 14px);
       }
       @include breakpoint(max-width 768px){
         width: calc(50% - 14px);
+        width: -moz-calc(50% - 14px);
       }
       @include breakpoint(max-width 660px){
         width: calc(100% - 14px);
+        width: -moz-calc(100% - 14px);
       }
       &:hover{
         .works__wrapper--descr{

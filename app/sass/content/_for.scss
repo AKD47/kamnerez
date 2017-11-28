@@ -36,6 +36,7 @@
         width: 230px;
         height: 230px;
         margin-left: calc(50% - (230px/2));
+        margin-left: -moz-calc(50% - (230px/2));
         margin-bottom: 57px;
         border-radius: 50%;
         overflow: hidden;

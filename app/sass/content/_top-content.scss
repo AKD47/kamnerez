@@ -13,6 +13,7 @@
     height: 2px;
     bottom: -1px;
     left: calc(50% - (80px/2));
+    left: -moz-calc(50% - (80px/2));
     background-color: #ef4666;
   }*/
   &__wrapper{
@@ -109,12 +110,14 @@
       position: relative;
       float: left;
       width: calc(33% - 20px);
+      width: -moz-calc(33% - 20px);
       height: 155px;
       overflow: hidden;
       margin-bottom: 24px;
       @include transition(0.4s);
       @include breakpoint(max-width 660px){
         width: calc(50% - 20px);
+        width: -moz-calc(50% - 20px);
       }
       @include breakpoint(max-width 520px){
         width: 100%;

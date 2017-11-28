@@ -16,6 +16,7 @@
     overflow: hidden;
     @include breakpoint(max-width 660px){
       margin-left: calc(50% - (220px/2));
+      margin-left: -moz-calc(50% - (220px/2));
     }
     img {
       size: 100%;

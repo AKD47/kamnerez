@@ -26,6 +26,7 @@
       position: relative;
       float: left;
       width: calc(25% - 14px);
+      width: -moz-calc(25% - 14px);
       height: 265px;
       margin-bottom: 25px;
       overflow: hidden;
@@ -33,12 +34,15 @@
       box-shadow: none;
       @include breakpoint(max-width 1024px){
         width: calc(33% - 14px);
+        width: -moz-calc(33% - 14px);
       }
       @include breakpoint(max-width 768px){
         width: calc(50% - 14px);
+        width: -moz-calc(50% - 14px);
       }
       @include breakpoint(max-width 660px){
         width: calc(100% - 14px);
+        width: -moz-calc(100% - 14px);
       }
       img{
         size: 100%;
@@ -172,5 +176,6 @@
     margin-top: 98px;
     margin-bottom: 73px;
     margin-left: calc(50% - (82px/2));
+    margin-left: -moz-calc(50% - (82px/2));
   }
 }

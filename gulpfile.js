@@ -49,7 +49,7 @@ gulp.task('sass', function () { // Создаем таск Sass
         short,
         fontmagic,
         fixes,
-        autoprefixer(['last 5 versions', '> 5%', 'ie 8', 'ie 7', 'ie 9', 'safari 5', 'opera 12.1', 'ios 6', 'android 4'], {
+        autoprefixer(['last 25 versions', '> 5%', 'ie 8', 'ie 7', 'ie 9', 'safari 5', 'opera 12.1', 'ios 6', 'android 4'], {
             cascade: true
         }),
         sorting(),

@@ -26,11 +26,13 @@
     .slick-dots{
       max-width: 1366px;
       margin-left: calc(50% - (1366px/2));
+      margin-left: -moz-calc(50% - (1366px/2));
       text-align: left;
       bottom: 47px;
       @include breakpoint(max-width 1366px){
         max-width:  1170px;
         margin-left: calc(50% - (1170px/2));
+        margin-left: -moz-calc(50% - (1170px/2));
       }
       li{
         width: 15px;
@@ -87,11 +89,13 @@
     position: absolute;
     top: 0;
     margin-left: calc(50% - (1366px/2));
+    margin-left: -moz-calc(50% - (1366px/2));
     max-width: 1366px;
     z-index: 2;
     @include breakpoint(max-width 1366px){
       max-width:  1170px;
       margin-left: calc(50% - (1170px/2));
+      margin-left: -moz-calc(50% - (1170px/2));
     }
     @include breakpoint(max-width 1200px){
       width: 100%;
