@@ -37,7 +37,8 @@
       float: left;
       width: calc(50% - 19px);
       width: -moz-calc(50% - 19px);
-      margin-right: 15px;
+      //margin-right: 15px;
+      overflow: hidden;
       @include breakpoint(max-width 660px){
         width: 100%;
         margin-right: 0;
@@ -70,7 +71,7 @@
       width: calc(50% - 19px);
       width: -moz-calc(50% - 19px);
       height: 151px;
-      margin-left: 15px;
+      //margin-left: 15px;
       padding: 22px 26px;
       @include box-sizing(border-box);
       border-radius: 3px;

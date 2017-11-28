@@ -37,6 +37,7 @@
     position: absolute;
     top: 32px;
     left: calc(50% - (28px/2));
+    left: -moz-calc(50% - (28px/2));
     width: 28px;
     height: 14px;
     background-image: url('../img/icons/go-top-icon.png');
@@ -73,6 +74,7 @@
     height: 2px;
     bottom: -1px;
     left: calc(50% - (80px/2));
+    left: -moz-calc(50% - (80px/2));
     background-color: #ef4666;
   }
 }

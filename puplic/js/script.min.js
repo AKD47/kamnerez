@@ -107,6 +107,7 @@ $(document).ready(function () {
             speed: 500,
             fade: true,
             arrows: false,
+            zIndex: 1,
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 2000,
@@ -144,6 +145,7 @@ $(document).ready(function () {
         infinite: false,
         arrows: true,
         speed: 300,
+        zIndex: 1,
         slidesToShow: 6,
         slidesToScroll: 1,
         responsive: [
@@ -190,6 +192,7 @@ $(document).ready(function () {
         speed: 300,
         slidesToShow: 6,
         slidesToScroll: 1,
+        zIndex: 1,
         responsive: [
             {
                 breakpoint: 1030,
@@ -274,6 +277,7 @@ function offerSlider() {
             infinite: true,
             arrows: true,
             speed: 300,
+            zIndex: 1,
             slidesToShow: 1,
             slidesToScroll: 1
         });
@@ -288,6 +292,7 @@ function worksSlider() {
             infinite: true,
             arrows: true,
             speed: 300,
+            zIndex: 1,
             slidesToShow: 1,
             slidesToScroll: 1
         });

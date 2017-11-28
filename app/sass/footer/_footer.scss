@@ -60,9 +60,9 @@
     }
   }
   &__contacts {
-    @include display-flex(flex);
-    @include flex-wrap(wrap);
-    @include flex-direction(column);
+    //@include display-flex(flex);
+    //@include flex-wrap(wrap);
+    //@include flex-direction(column);
     position: relative;
     float: left;
     width: 25%;
