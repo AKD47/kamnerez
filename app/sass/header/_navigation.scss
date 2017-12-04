@@ -87,7 +87,7 @@
             width: 100%;
             height: 3px;
             left: 0;
-            bottom: -35px;
+            bottom: -34px;
             background-color: #e23f5e;
             @include breakpoint(max-width 1024px){
               display: none;
@@ -120,7 +120,7 @@
     width: calc(100% + 586px);
     width: -moz-calc(100% + 586px);
     left: -242px;
-    top: 55px;
+    top: 54px;
     padding-top: 50px;
     padding-bottom: 80px;
     padding-left: 25px;
