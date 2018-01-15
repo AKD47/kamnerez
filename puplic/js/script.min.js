@@ -1,25 +1,17 @@
 if ($('#map').length > 0) {
-    var map = new Map();
-    map.init({
-        selector: '#map',
-        center: $('.concreate-adress').html(),
-        zoom: 13,
-        placemarks: [
-            {
-                address: $(".concreate-adress").html(),
-                options: [
-                    {key: 'draggable', value: false},
-                    {key: 'iconLayout', value: 'default#image'},
-                    {key: 'iconImageHref', value: 'img/icons/map-marker-icon.png'}
-                ],
-                properties: [
-                    {key: 'balloonContentHeader', value: $('.map-placemarks-title').html()}
-                ]
-            }
-        ]
-    });
-}
+    ymaps.ready(init);
+    var myMap,
+        myPlacemark;
 
+    function init(){
+        myMap = new ymaps.Map("map", {
+            center: [56.002819, 37.802068],
+            zoom: 13
+        });       
+        myPlacemark = new ymaps.Placemark([56.002819, 37.802068], {});       
+        myMap.geoObjects.add(myPlacemark);
+    }
+}
 
 $(document).ready(function () {
 
