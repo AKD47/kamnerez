@@ -150,3 +150,9 @@
 .hidden-before-preloader{
   opacity: 0;
 }
+.error{
+  box-shadow: 0 0 4px rgba(240, 66, 74, .47), inset 0 1px 3px rgba(0, 0, 0, .17);
+}
+.not_error{
+  box-shadow: 0 0 4px rgba(110, 190, 99, .47), inset 0 1px 3px rgba(0, 0, 0, .17);
+}

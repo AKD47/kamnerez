@@ -3,12 +3,12 @@ if ($('#map').length > 0) {
     var myMap,
         myPlacemark;
 
-    function init(){
+    function init() {
         myMap = new ymaps.Map("map", {
             center: [56.002819, 37.802068],
             zoom: 13
-        });       
-        myPlacemark = new ymaps.Placemark([56.002819, 37.802068], {});       
+        });
+        myPlacemark = new ymaps.Placemark([56.002819, 37.802068], {});
         myMap.geoObjects.add(myPlacemark);
     }
 }
@@ -29,7 +29,6 @@ $(document).ready(function () {
     $(document).on('click', '.header__msg', function (event) {
         event.preventDefault();
         var form = $(this).next('.header__callback');
-        console.log(form);
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
             form.slideUp(400);
@@ -55,8 +54,8 @@ $(document).ready(function () {
 
     /*header submenu*/
 
-   
-    if(window.innerWidth > 1024){
+
+    if (window.innerWidth > 1024) {
         $('.header__menu > li > a').mouseover(function () {
             var submenu = $(this).next('.header__submenu');
             $('.header__menu > li > a').removeClass('show-submenu');
@@ -68,7 +67,7 @@ $(document).ready(function () {
     $(document).on('click', '.mobile-submenu', function (event) {
         event.preventDefault();
         var submenu = $(this).closest('a').next('.header__submenu');
-        if($(this).hasClass('show-mobile-submenu')){
+        if ($(this).hasClass('show-mobile-submenu')) {
             $(this).removeClass('show-mobile-submenu');
             submenu.slideUp(400);
         } else {
@@ -125,7 +124,7 @@ $(document).ready(function () {
     /*close*/
 
     /*offer mobile slider and works slider*/
-    $(window).on('load resize',function(){
+    $(window).on('load resize', function () {
         offerSlider();
         worksSlider();
     });
@@ -177,6 +176,7 @@ $(document).ready(function () {
     });
     /*close*/
 
+    /*catalog items slider*/
     $('.catalog__items').slick({
         dots: false,
         infinite: false,
@@ -236,6 +236,70 @@ $(document).ready(function () {
         return false;
     });
     /*close*/
+
+    /*---forms---*/
+    /*header form*/
+    $('#header-form-name, #header-form-email, #header-form-text').unbind().blur(function () {
+
+        var id = $(this).attr('id');
+        var val = $(this).val();
+
+        switch (id) {
+            case 'header-form-name':
+                var rv_name = /^[a-zA-Zа-яА-Я]+$/;
+                if (val.length > 2 && val != '' && rv_name.test(val)) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+            case 'header-form-email':
+                var rv_email = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
+                if (val != '' && rv_email.test(val)) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+            case 'header-form-text':
+                if (val != '' && val.length < 5000) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+        } // end switch(...)
+
+    }); // end blur()
+    $('#header-form').submit(function (event) {
+        event.preventDefault();
+        var name = $('#header-form-name').val(),
+            mail = $('#header-form-email').val(),
+            message = $('#header-form-text').val();
+        // if (name != '' && mail != '') {           
+            $.ajax({
+                url: myajax.url,
+                type: "POST",
+                data: {
+                    action: 'feedback',
+                    name: name,
+                    mail: mail,
+                    message: message
+                },
+                success: function (data) {
+                    $('#header-form input:text, textarea').val('').removeClass('error, not_error').text('');
+                    $('.header__msg').removeClass('active');
+                    $('.header__callback').slideUp(400);
+                }
+            }); // end ajax({...})
+            return false;
+        // }
+
+    }); // end submit()
+    /*close*/
 });
 
 //preloader
@@ -263,7 +327,7 @@ $(document).ready(function () {
 
 //offer slider for mobile
 function offerSlider() {
-    if($(document).width() < 679){
+    if ($(document).width() < 679) {
         $('#offer-mobile-slider').slick({
             dots: true,
             infinite: true,
@@ -278,7 +342,7 @@ function offerSlider() {
 
 //our works slider for mobile
 function worksSlider() {
-    if($(document).width() < 679){
+    if ($(document).width() < 679) {
         $('#works-slider').slick({
             dots: true,
             infinite: true,
