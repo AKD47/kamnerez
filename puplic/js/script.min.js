@@ -279,12 +279,11 @@ $(document).ready(function () {
         var name = $('#header-form-name').val(),
             mail = $('#header-form-email').val(),
             message = $('#header-form-text').val();
-        // if (name != '' && mail != '') {           
             $.ajax({
                 url: myajax.url,
                 type: "POST",
                 data: {
-                    action: 'feedback',
+                    action: 'headfeedback',
                     name: name,
                     mail: mail,
                     message: message
@@ -295,9 +294,123 @@ $(document).ready(function () {
                     $('.header__callback').slideUp(400);
                 }
             }); // end ajax({...})
-            return false;
-        // }
+            return false;  
+    }); // end submit()
+    /*close*/
+    
+    /*main page feedback*/
+    $('#feedback-main-name, #feedback-main-email, #feedback-main-text').unbind().blur(function () {
 
+        var id = $(this).attr('id');
+        var val = $(this).val();
+
+        switch (id) {
+            case 'feedback-main-name':
+                var rv_name = /^[a-zA-Zа-яА-Я]+$/;
+                if (val.length > 2 && val != '' && rv_name.test(val)) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+            case 'feedback-main-email':
+                var rv_email = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
+                if (val != '' && rv_email.test(val)) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+            case 'feedback-main-text':
+                if (val != '' && val.length < 5000) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+        } // end switch(...)
+
+    }); // end blur()
+    $('#feedback-main').submit(function (event) {
+        event.preventDefault();
+        var name = $('#feedback-main-name').val(),
+            mail = $('#feedback-main-email').val(),
+            message = $('#feedback-main-text').val();
+        $.ajax({
+            url: myajax.url,
+            type: "POST",
+            data: {
+                action: 'mainfeedback',
+                name: name,
+                mail: mail,
+                message: message
+            },
+            success: function (data) {
+                $('#feedback-main input:text, textarea').val('').removeClass('error, not_error').text('');               
+            }
+        }); // end ajax({...})
+        return false;
+    }); // end submit()
+    /*close*/
+    
+    /*contacts-form*/
+    $('#contacts-form-name, #contacts-form-email, #contacts-form-text').unbind().blur(function () {
+
+        var id = $(this).attr('id');
+        var val = $(this).val();
+
+        switch (id) {
+            case 'contacts-form-name':
+                var rv_name = /^[a-zA-Zа-яА-Я]+$/;
+                if (val.length > 2 && val != '' && rv_name.test(val)) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+            case 'contacts-form-email':
+                var rv_email = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
+                if (val != '' && rv_email.test(val)) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+            case 'contacts-form-text':
+                if (val != '' && val.length < 5000) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+        } // end switch(...)
+
+    }); // end blur()
+    $('#contacts-form').submit(function (event) {
+        event.preventDefault();
+        var name = $('#contacts-form-name').val(),
+            mail = $('#contacts-form-email').val(),
+            message = $('#contacts-form-text').val();
+        $.ajax({
+            url: myajax.url,
+            type: "POST",
+            data: {
+                action: 'contacts',
+                name: name,
+                mail: mail,
+                message: message
+            },
+            success: function (data) {
+                $('#contacts-form input:text, textarea').val('').removeClass('error, not_error').text('');
+            }
+        }); // end ajax({...})
+        return false;
     }); // end submit()
     /*close*/
 });
