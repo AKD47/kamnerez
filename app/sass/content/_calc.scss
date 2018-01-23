@@ -1,9 +1,10 @@
-.calc{
+.calc {
   position: relative;
   float: left;
   width: 100%;
   background-color: #f7f7f7;
-  &__title{
+
+  &__title {
     position: relative;
     float: left;
     width: 100%;
@@ -14,18 +15,21 @@
     margin-top: 82px;
     margin-bottom: 43px;
   }
-  &__image{
+
+  &__image {
     position: relative;
     float: left;
     width: 100%;
     overflow: hidden;
     //text-align: center;
-    img{
+
+    img {
       size: 100%;
       object-fit: contain;
     }
   }
-  &__list{
+
+  &__list {
     position: relative;
     float: left;
     width: 60%;
@@ -33,13 +37,15 @@
     margin-top: -320px;
     margin-left: 66px;
     list-style: none;
-    @include breakpoint(max-width 770px){
+
+    @include breakpoint(max-width 770px) {
       width: 100%;
       margin-top: 15px;
       margin-bottom: 15px;
       margin-left: 0;
     }
-    li{
+
+    li {
       position: relative;
       float: left;
       width: 100%;
@@ -47,7 +53,8 @@
       padding-left: 29px;
       padding-right: 29px;
       @include box-sizing(border-box);
-      span{
+
+      span {
         position: relative;
         float: left;
         color: #494949;
@@ -55,29 +62,38 @@
         font-size: 18px;
         font-weight: 700;
         line-height: 40px;
-        @include breakpoint(max-width 660px){
+
+        @include breakpoint(max-width 660px) {
           font-size: 14px;
         }
-        &:first-of-type{
+
+        &:first-of-type {
           width: 70%;
         }
-        &:last-of-type{
+
+        &:last-of-type {
           width: 30%;
           text-align: left;
         }
       }
     }
-    li:nth-of-type(odd){
+
+    li:nth-of-type(odd) {
       background-color: #eeeeee;
     }
-    li:last-of-type{
+
+    li:last-of-type {
       background-color: #353535;
-      span{
+
+      span {
         color: #ffffff;
       }
+
     }
+
   }
-  &__subtitle{
+
+  &__subtitle {
     position: relative;
     float: left;
     width: 100%;
@@ -88,7 +104,8 @@
     margin-top: 0;
     margin-bottom: 61px;
   }
-  &__wrapper{
+
+  &__wrapper {
     @include display-flex(flex);
     @include flex-wrap(wrap);
     @include flex-direction(row);
@@ -96,20 +113,27 @@
     position: relative;
     float: left;
     width: 100%;
-    &--item{
+
+    &--item {
       position: relative;
       float: left;
-      width: calc(50% - (56px/2));
-      width: -moz-calc(50% - (56px/2));
+      width: calc(50% - (56px / 2));
+      width: -moz-calc(50% - (56px / 2));
+      height: 112px;
       overflow: hidden;
       margin-bottom: 45px;
-      @include breakpoint(max-width 660px){
+
+      @include breakpoint(max-width 660px) {
         width: 100%;
       }
-      img{
+
+      img {
         size: 100%;
         object-fit: contain;
       }
+
     }
+
   }
+
 }
