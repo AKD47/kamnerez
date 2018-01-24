@@ -1,0 +1,13 @@
+.notpage {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: calc(100vh - (85px + 473px));
+  &__title {
+    position: relative;
+    float: left;
+    width: 100%;
+    text-align: center;
+  }
+
+}
