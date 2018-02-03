@@ -26,11 +26,13 @@
     .slick-dots{
       max-width: 1366px;
       margin-left: calc(50% - (1366px/2));
+      margin-left: -moz-calc(50% - (1366px/2));
       text-align: left;
       bottom: 47px;
       @include breakpoint(max-width 1366px){
         max-width:  1170px;
         margin-left: calc(50% - (1170px/2));
+        margin-left: -moz-calc(50% - (1170px/2));
       }
       li{
         width: 15px;
@@ -87,11 +89,13 @@
     position: absolute;
     top: 0;
     margin-left: calc(50% - (1366px/2));
+    margin-left: -moz-calc(50% - (1366px/2));
     max-width: 1366px;
-    z-index: 2;
+    //z-index: 2;
     @include breakpoint(max-width 1366px){
       max-width:  1170px;
       margin-left: calc(50% - (1170px/2));
+      margin-left: -moz-calc(50% - (1170px/2));
     }
     @include breakpoint(max-width 1200px){
       width: 100%;
@@ -156,18 +160,28 @@
         -webkit-background-size: contain;
         background-size: contain;
         -webkit-animation-duration: 1s;
+        -o-animation-duration: 1s;
+        -moz-animation-duration: 1s;
         animation-duration: 1s;
         -webkit-animation-fill-mode: both;
+        -o-animation-fill-mode: both;
+        -moz-animation-fill-mode: both;
         animation-fill-mode: both;
         -webkit-animation-timing-function: ease-in-out;
+        -o-animation-timing-function: ease-in-out;
+        -moz-animation-timing-function: ease-in-out;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
         -webkit-animation-iteration-count: infinite;
+        -o-animation-iteration-count: infinite;
+        -moz-animation-iteration-count: infinite;
       }
     }
     > a:hover{
       .icon{
         animation-name: left;
+        -webkit-animation-name: left;
+        -o-animation-name: left;
         -moz-animation-name: left;
       }
     }
@@ -178,16 +192,22 @@
   0%, 100%, 20%, 50%, 80% {
     -webkit-transform: translateX(0);
     -ms-transform:     translateX(0);
+    -o-transform:     translateX(0);
+    -moz-transform:     translateX(0);
     transform:         translateX(0)
   }
   40% {
     -webkit-transform: translateX(-15px);
     -ms-transform:     translateX(-15px);
+    -o-transform:     translateX(-15px);
+    -moz-transform:     translateX(-15px);
     transform:         translateX(-15px)
   }
   60% {
     -webkit-transform: translateX(-10px);
     -ms-transform:     translateX(-10px);
+    -o-transform:     translateX(-10px);
+    -moz-transform:     translateX(-10px);
     transform:         translateX(-10px)
   }
 }
