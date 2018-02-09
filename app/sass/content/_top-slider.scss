@@ -52,6 +52,10 @@
           border: none;
           padding: 0;
           background-color: #fff;
+
+          &:before {
+            content: '';
+          }
         }
       }
 
@@ -59,6 +63,10 @@
 
         button {
           background-color: #ef4666;
+
+          &:before {
+            content: '';
+          }
         }
 
       }
@@ -142,6 +150,7 @@
         line-height: 29px;
       }
     }
+
     > p {
       display: block;
       position: relative;
