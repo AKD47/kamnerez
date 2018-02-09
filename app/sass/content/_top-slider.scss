@@ -1,43 +1,51 @@
-.top-slider{
+.top-slider {
   display: block;
   position: relative;
   float: left;
   width: 100%;
-  &__wrapper{
+
+  &__wrapper {
     display: block;
     position: relative;
     float: left;
     width: 100%;
-    &--slide{
+
+    &--slide {
       display: block;
       position: relative;
       float: left;
       width: 100%;
       height: 586px;
       overflow: hidden;
-      @include breakpoint(max-width 660px){
+
+      @include breakpoint(max-width 660px) {
         height: 400px;
       }
-      img{
+
+      img {
         size: 100%;
         object-fit: cover;
       }
     }
-    .slick-dots{
+
+    .slick-dots {
       max-width: 1366px;
-      margin-left: calc(50% - (1366px/2));
-      margin-left: -moz-calc(50% - (1366px/2));
+      margin-left: calc(50% - (1366px / 2));
+      margin-left: -moz-calc(50% - (1366px / 2));
       text-align: left;
       bottom: 47px;
-      @include breakpoint(max-width 1366px){
-        max-width:  1170px;
-        margin-left: calc(50% - (1170px/2));
-        margin-left: -moz-calc(50% - (1170px/2));
+
+      @include breakpoint(max-width 1366px) {
+        max-width: 1170px;
+        margin-left: calc(50% - (1170px / 2));
+        margin-left: -moz-calc(50% - (1170px / 2));
       }
-      li{
+
+      li {
         width: 15px;
         height: 15px;
-        button{
+
+        button {
           color: transparent;
           size: 100%;
           border-radius: 50%;
@@ -46,12 +54,16 @@
           background-color: #fff;
         }
       }
-      li.slick-active{
-        button{
+
+      li.slick-active {
+
+        button {
           background-color: #ef4666;
         }
+
       }
     }
+
     .slick-prev {
       width: 54px;
       height: 54px;
@@ -62,10 +74,13 @@
       -webkit-background-size: contain;
       background-size: contain;
       color: transparent;
-      &:before{
+
+      &:before {
+        content: '';
         display: none;
       }
     }
+
     .slick-next {
       width: 54px;
       height: 54px;
@@ -76,34 +91,40 @@
       -webkit-background-size: contain;
       background-size: contain;
       color: transparent;
-      &:before{
+
+      &:before {
+        content: '';
         display: none;
       }
     }
+
     .slick-dotted.slick-slider {
-      margin-bottom: 0!important;
+      margin-bottom: 0 !important;
     }
   }
-  &__descr{
+
+  &__descr {
     display: block;
     position: absolute;
     top: 0;
-    margin-left: calc(50% - (1366px/2));
-    margin-left: -moz-calc(50% - (1366px/2));
+    margin-left: calc(50% - (1366px / 2));
+    margin-left: -moz-calc(50% - (1366px / 2));
     max-width: 1366px;
     //z-index: 2;
-    @include breakpoint(max-width 1366px){
-      max-width:  1170px;
-      margin-left: calc(50% - (1170px/2));
-      margin-left: -moz-calc(50% - (1170px/2));
+    @include breakpoint(max-width 1366px) {
+      max-width: 1170px;
+      margin-left: calc(50% - (1170px / 2));
+      margin-left: -moz-calc(50% - (1170px / 2));
     }
-    @include breakpoint(max-width 1200px){
+
+    @include breakpoint(max-width 1200px) {
       width: 100%;
       margin-left: 0;
       padding: 0 15px;
       @include box-sizing(border-box);
     }
-    > h1{
+
+    > h1 {
       display: block;
       position: relative;
       float: left;
@@ -114,13 +135,14 @@
       font-family: $PFBeauSansProReg;
       font-size: 55px;
       line-height: 60px;
-      @include breakpoint(max-width 660px){
+
+      @include breakpoint(max-width 660px) {
         margin-top: 52px;
         font-size: 30px;
         line-height: 29px;
       }
     }
-    > p{
+    > p {
       display: block;
       position: relative;
       float: left;
@@ -129,7 +151,7 @@
       //font-family: $PFBeauSansProBook;
       font-size: 17px;
     }
-    > a{
+    > a {
       display: block;
       position: relative;
       float: left;
@@ -147,7 +169,7 @@
       text-transform: uppercase;
       letter-spacing: 4px;
       line-height: 26px;
-      .icon{
+      .icon {
         display: block;
         position: relative;
         float: left;
@@ -177,8 +199,8 @@
         -moz-animation-iteration-count: infinite;
       }
     }
-    > a:hover{
-      .icon{
+    > a:hover {
+      .icon {
         animation-name: left;
         -webkit-animation-name: left;
         -o-animation-name: left;
@@ -191,23 +213,23 @@
 @keyframes left {
   0%, 100%, 20%, 50%, 80% {
     -webkit-transform: translateX(0);
-    -ms-transform:     translateX(0);
-    -o-transform:     translateX(0);
-    -moz-transform:     translateX(0);
-    transform:         translateX(0)
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    -moz-transform: translateX(0);
+    transform: translateX(0)
   }
   40% {
     -webkit-transform: translateX(-15px);
-    -ms-transform:     translateX(-15px);
-    -o-transform:     translateX(-15px);
-    -moz-transform:     translateX(-15px);
-    transform:         translateX(-15px)
+    -ms-transform: translateX(-15px);
+    -o-transform: translateX(-15px);
+    -moz-transform: translateX(-15px);
+    transform: translateX(-15px)
   }
   60% {
     -webkit-transform: translateX(-10px);
-    -ms-transform:     translateX(-10px);
-    -o-transform:     translateX(-10px);
-    -moz-transform:     translateX(-10px);
-    transform:         translateX(-10px)
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    transform: translateX(-10px)
   }
 }
