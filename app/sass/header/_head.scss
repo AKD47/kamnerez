@@ -5,6 +5,7 @@
   width: 100%;
   box-shadow: 0 1px 2px rgba(111, 111, 111, 0.24);
   z-index: 3;
+
   &__logo {
     display: block;
     position: relative;
@@ -15,15 +16,23 @@
     margin-top: 17px;
     margin-bottom: 18px;
     overflow: hidden;
+
+    @include breakpoint(max-width 1400px){
+      width: 180px;
+      height: 50px;
+    }
+
     @include breakpoint(max-width 660px){
       margin-left: calc(50% - (220px/2));
       margin-left: -moz-calc(50% - (220px/2));
     }
+
     img {
       size: 100%;
       object-fit: contain;
     }
   }
+
   &__phones {
     display: block;
     position: relative;
@@ -41,6 +50,7 @@
       margin-left: 0;
       margin-top: 27px;
     }
+
     a {
       display: block;
       position: relative;
@@ -51,10 +61,12 @@
       color: #222222;
       font-family: $PFBeauSansProBook;
       font-size: 18px;
+
       @include breakpoint(max-width 660px){
         font-size: 14px;
       }
     }
+
     &:before {
       display: block;
       position: absolute;
@@ -71,6 +83,7 @@
       }
     }
   }
+
   &__msg {
     /*@include display-flex(flex);
     @include flex-wrap(wrap);
@@ -83,6 +96,7 @@
     height: 85px;
     margin-top: 0;
     margin-right: 0;
+
     &--icon {
       display: block;
       position: relative;
@@ -100,18 +114,23 @@
       background-size: contain;
     }
   }
+
   &__msg:hover {
     background-color: #d71f42;
+
     .header__msg--icon{
       background-image: url('../img/icons/msag-active-icon.png');
     }
   }
+
   &__msg.active{
     background-color: #d71f42;
+
     .header__msg--icon{
       background-image: url('../img/icons/msag-active-icon.png');
     }
   }
+
   &__callback{
     display: none;
     position: absolute;
@@ -120,10 +139,12 @@
     width: 578px;
     background-color: #363636;
     z-index: 2;
+
     @include breakpoint(max-width 660px){
       top: 171px;
       width: 300px;
     }
+
     &--close{
       display: block;
       position: absolute;
@@ -139,6 +160,7 @@
       background-size: contain;
       z-index: 1;
     }
+
     &--title{
       display: block;
       position: relative;
@@ -152,6 +174,7 @@
       font-weight: 300;
     }
   }
+
   &__callback-form{
     display: block;
     position: relative;
@@ -159,10 +182,12 @@
     width: 364px;
     margin-left: calc(50% - (364px/2));
     margin-left: -moz-calc(50% - (364px/2));
+
     @include breakpoint(max-width 660px){
       width: 70%;
       margin-left: 15%;
     }
+
     &--field{
       display: block;
       position: relative;
@@ -180,6 +205,7 @@
       font-weight: 400;
       background-color: transparent;
     }
+
     &--msg{
       resize: none;
       display: block;
@@ -198,6 +224,7 @@
       font-weight: 400;
       background-color: transparent;
     }
+
     &--submit{
       display: block;
       position: relative;

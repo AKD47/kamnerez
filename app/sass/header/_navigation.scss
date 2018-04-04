@@ -1,4 +1,5 @@
 .header{
+
   &__navigation{
     display: block;
     position: relative;
@@ -7,11 +8,17 @@
     width: -moz-calc(100% - (220px + 220px + 40px + 84px));
     padding-left: 22px;
     @include box-sizing(border-box);
+
+    @include breakpoint(max-width 1400px){
+      width: calc(100% - (180px + 220px + 40px + 84px));
+    }
+
     @include breakpoint(max-width 1224px){
       width: calc(100% - (220px + 23px));
       width: -moz-calc(100% - (220px + 23px));
     }
   }
+
   &__menu{
     //@include display-flex(flex);
     //@include flex-wrap(wrap);
@@ -24,9 +31,11 @@
     margin-top: 32px;
     padding: 0;
     list-style: none;
-    @include breakpoint(max-width 1300px){
+
+    @include breakpoint(max-width 1400px){
       margin-top: 36px;
     }
+
     @include breakpoint(max-width 1024px) {
       display: none;
       position: fixed;
@@ -44,9 +53,11 @@
       margin-bottom: 24px;
       background: rgba(0, 0, 0, .9);
     }
+
     > li{
       //position: relative;
       //float: left;
+
       @include breakpoint(max-width 1024px){
         position: relative;
         float: left;
@@ -54,6 +65,7 @@
         text-align: center;
         margin: 15px 0;
       }
+
       > a{
         display: block;
         position: relative;
@@ -66,6 +78,7 @@
         font-family: $PFBeauSansProReg;
         font-size: 17px;
         text-transform: uppercase;
+
         @include breakpoint(max-width 1400px){
           font-size: 14px;
         }
@@ -78,8 +91,10 @@
           color: #fff;
           margin: 0;
         }
+
         &:hover{
           color: #e23f5e;
+
           &:after{
             display: block;
             position: absolute;
@@ -89,6 +104,7 @@
             left: 0;
             bottom: -34px;
             background-color: #e23f5e;
+
             @include breakpoint(max-width 1024px){
               display: none;
             }
@@ -96,6 +112,7 @@
         }
       }
     }
+
     .mobile-submenu{
       display: none;
       position: absolute;
@@ -105,10 +122,12 @@
       right: 0;
       padding: 0 30px;
       cursor: pointer;
+
       .fa-chevron-down{
         font-size: 15px;
         color: #fff;
       }
+
       @include breakpoint(max-width 1024px){
         display: block;
       }
@@ -127,9 +146,15 @@
     padding-right: 25px;
     @include box-sizing(border-box);
     background-color: #363636;
+
+    @include breakpoint(max-width 1400px){
+      top: 50px;
+    }
+
     @include breakpoint(max-width 1280px){
       top: 50px;
     }
+
     @include breakpoint(max-width 1024px){
       position: relative;
       float: left;
@@ -139,6 +164,7 @@
       margin-top: 10px;
       padding: 10px;
     }
+
     &--close{
       display: block;
       position: absolute;
@@ -152,10 +178,12 @@
       background-repeat: no-repeat;
       background-size: contain;
       z-index: 1;
+
       @include breakpoint(max-width 1024px){
         display: none;
       }
     }
+
     &--elements{
       //@include display-flex(flex);
       //@include flex-wrap(wrap);
@@ -170,12 +198,15 @@
       margin-right: 15px;
       padding: 0;
       list-style: none;
+
       @include breakpoint(max-width 1024px){
         width: 100%;
         margin: 0;
       }
+
       li{
         width: 100%;
+
         a{
           position: relative;
           float: left;
@@ -184,12 +215,14 @@
           font-size: 18px;
           color: #ffffff;
           line-height: 40px;
-          @include breakpoint(max-width 1280px){
-            font-size: 12px;
+
+          @include breakpoint(max-width 1400px){
+            font-size: 14px;
           }
           @include breakpoint(max-width 1024px){
             width: 100%;
           }
+
           &:hover{
             color: #e23f5e;
             text-decoration: underline;
@@ -198,6 +231,7 @@
       }
     }
   }
+
   &__trigger{
     display: none;
     position: fixed;
@@ -209,9 +243,11 @@
     border-radius: 50%;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
     z-index: 15;
+
     @include breakpoint(max-width 1024px) {
       display: block;
     }
+
     span, span:before, span:after {
       display: block;
       height: 2px;
@@ -223,22 +259,27 @@
       top: 50%;
       margin-top: -1px;
     }
+
     span:before {
       transition: all 0.2s;
       margin-top: -6px;
       content: '';
     }
+
     span:after {
       transition: all 0.2s;
       margin-top: 4px;
       content: '';
     }
+
     &--active span {
       background-color: transparent;
+
       &:before {
         transform: rotate(135deg);
         margin-top: 0;
       }
+
       &:after {
         transform: rotate(-134deg);
         margin-top: 0;
