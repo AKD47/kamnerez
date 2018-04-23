@@ -130,31 +130,70 @@ $(document).ready(function () {
     });
     /*close*/
 
-    /*clients slider*/
-    $('.clients__items').slick({
-        dots: false,
-        infinite: false,
-        arrows: true,
-        speed: 300,
-        zIndex: 1,
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        responsive: [
-            {
-                breakpoint: 1030,
-                settings: {
-                    arrows: false
+
+    /*sliders in tabs*/
+    $(window).on('load', function () {
+        /*clients slider*/
+        $('.clients__items').slick({
+            dots: false,
+            infinite: false,
+            arrows: true,
+            speed: 300,
+            zIndex: 1,
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1030,
+                    settings: {
+                        arrows: false
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false
+                    }
                 }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: false
+            ]
+        });
+
+        /*catalog items slider*/
+        $('.catalog__items').slick({
+            dots: false,
+            infinite: false,
+            arrows: true,
+            speed: 300,
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            zIndex: 1,
+            responsive: [
+                {
+                    breakpoint: 1030,
+                    settings: {
+                        arrows: false
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                        arrows: false
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false
+                    }
                 }
-            }
-        ]
+            ]
+        });
     });
     /*close*/
 
@@ -175,41 +214,6 @@ $(document).ready(function () {
         });
     });
     /*close*/
-
-    /*catalog items slider*/
-    $('.catalog__items').slick({
-        dots: false,
-        infinite: false,
-        arrows: true,
-        speed: 300,
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        zIndex: 1,
-        responsive: [
-            {
-                breakpoint: 1030,
-                settings: {
-                    arrows: false
-                }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 1,
-                    arrows: false
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: false
-                }
-            }
-        ]
-    });
 
     /*catalog stones tabs*/
     $('.catalog__wrapper--box').each(function (i) {
